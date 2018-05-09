@@ -62,3 +62,4 @@ AllCops:
     - 'db/**/*'
     - 'vendor/**/*'
     - 'config/environments/*'
+    - 'config/initializers/*'
