@@ -61,3 +61,4 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'vendor/**/*'
+    - 'config/environments/*'
