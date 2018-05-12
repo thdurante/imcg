@@ -16,7 +16,7 @@
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid $aqua-green;
+  border: 2px solid $red;
   border-radius: 2px;
 }
 
@@ -47,7 +47,7 @@
 .onoffswitch-inner:before {
   content: "ON";
   padding-left: 10px;
-  background-color: $aqua-green;
+  background-color: $red;
   color: #FFFFFF;
 }
 
@@ -63,7 +63,7 @@
   width: 20px;
   margin: 0;
   background: #FFFFFF;
-  border: 2px solid $aqua-green;
+  border: 2px solid $red;
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -238,8 +238,8 @@
 }
 
 .fc-state-active {
-  background-color: $aqua-green;
-  border-color: $aqua-green;
+  background-color: $red;
+  border-color: $red;
   color: #ffffff;
 }
 
@@ -277,8 +277,8 @@
 .fc-agenda .fc-event-time,
 .fc-event a {
   padding: 4px 6px;
-  background-color: $aqua-green; /* background color */
-  border-color: $aqua-green; /* border color */
+  background-color: $red; /* background color */
+  border-color: $red; /* border color */
 }
 
 .fc-event-time, .fc-event-title {
@@ -394,8 +394,8 @@
 /* LIST GROUP */
 
 a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
-  background-color: $aqua-green;
-  border-color: $aqua-green;
+  background-color: $red;
+  border-color: $red;
   color: #FFFFFF;
   z-index: 2;
 }
@@ -746,7 +746,7 @@ div.dt-button-info {
 }
 
 .pace .pace-progress {
-  background: $aqua-green;
+  background: $red;
   position: fixed;
   z-index: 2040;
   top: 0;
@@ -903,11 +903,11 @@ div.dt-button-info {
 }
 
 .form-control:focus, .single-line:focus {
-  border-color: $aqua-green;
+  border-color: $red;
 }
 
 .has-success .form-control, .has-success .form-control:focus {
-  border-color: $aqua-green;
+  border-color: $red;
 }
 
 .has-warning .form-control, .has-warning .form-control:focus {
@@ -919,7 +919,7 @@ div.dt-button-info {
 }
 
 .has-success .control-label {
-  color: $aqua-green;
+  color: $red;
 }
 
 .has-warning .control-label {
@@ -951,7 +951,7 @@ div.dt-button-info {
 }
 
 .noUi-connect {
-  background: none repeat scroll 0 0 $aqua-green;
+  background: none repeat scroll 0 0 $red;
   box-shadow: none;
 }
 
@@ -1592,11 +1592,11 @@ label.error {
 }
 
 .toast {
-  background-color: $aqua-green
+  background-color: $red
 }
 
 .toast-success {
-  background-color: $aqua-green
+  background-color: $red
 }
 
 .toast-error {
@@ -1644,7 +1644,7 @@ label.error {
 }
 
 .inspinia-notify.alert-info {
-  border-left: 6px solid $aqua-green;
+  border-left: 6px solid $red;
 }
 
 /* Image cropper style */
@@ -1784,11 +1784,11 @@ a.forum-item-title:hover {
 }
 
 .forum-item.active .fa {
-  color: $aqua-green;
+  color: $red;
 }
 
 .forum-item.active a.forum-item-title {
-  color: $aqua-green;
+  color: $red;
 }
 
 @media (max-width: 992px) {
@@ -1990,7 +1990,7 @@ a.forum-item-title:hover {
 }
 
 .vertical-date small {
-  color: $aqua-green;
+  color: $red;
   font-weight: 400;
 }
 
@@ -2261,7 +2261,7 @@ a.forum-item-title:hover {
   position: absolute;
   left: 10px;
   border-radius: 3px;
-  background: $aqua-green;
+  background: $red;
   padding: 3px;
   color: white;
   cursor: pointer;
@@ -2373,7 +2373,7 @@ a.forum-item-title:hover {
 
 .slick-prev:before,
 .slick-next:before {
-  color: $aqua-green !important;
+  color: $red !important;
 }
 
 /* Payments */
@@ -2419,11 +2419,11 @@ a.forum-item-title:hover {
 
 .select2-container--default.select2-container--focus .select2-selection--single,
 .select2-container--default.select2-container--focus .select2-selection--multiple {
-  border-color: $aqua-green;
+  border-color: $red;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: $aqua-green;
+  background-color: $red;
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
@@ -2444,7 +2444,7 @@ a.forum-item-title:hover {
 
 
 .ui-select-container.ui-select-bootstrap .ui-select-choices-row.active > a {
-  background-color: $aqua-green;
+  background-color: $red;
 }
 
 /* Tour */
@@ -2507,7 +2507,7 @@ body.tour-open .animated {
 
 .dropzone {
   min-height: 140px;
-  border: 1px dashed $aqua-green;
+  border: 1px dashed $red;
   background: white;
   padding: 20px 20px;
 
@@ -2558,8 +2558,8 @@ body.tour-open .animated {
 
       &.bg-primary {
         color: #ffffff;
-        background-color: $aqua-green;
-        border-color: $aqua-green;
+        background-color: $red;
+        border-color: $red;
       }
 
       &.bg-warning {

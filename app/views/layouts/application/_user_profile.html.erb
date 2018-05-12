@@ -1,0 +1,43 @@
+<div class="hidden-xs hidden-sm">
+  <ul class="nav navbar-top-links navbar-right">
+    <li>
+      <div class='avatar xs' style="background-image: url('<%= image_url('default.png') %>');"></div>
+    </li>
+
+    <li>
+      <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false" style="padding: 0; margin-left: 8px;">
+        <span class="clear">
+          <span class="block m-t-xs">Nome do Usuário</span>
+
+          <span class="text-muted text-xs block">
+            Admin
+            <b class="caret"></b></span>
+        </span>
+      </a>
+
+      <%= render 'layouts/application/user_profile_items' %>
+    </li>
+  </ul>
+</div>
+
+<div class='hidden-md hidden-lg hidden-xl'>
+  <ul class="nav navbar-top-links navbar-right">
+    <li>
+      <div class='avatar xs' style="background-image: url('<%= image_url('default.png') %>');"></div>
+    </li>
+
+    <li>
+      <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false" style="padding: 0px; margin-left: 8px;">
+        <span class="clear">
+          <span class="block m-t-xs">Nome do Usuário</span>
+
+          <span class="text-muted text-xs block">
+            Admin
+            <b class="caret"></b></span>
+        </span>
+      </a>
+
+      <%= render 'layouts/application/user_profile_items' %>
+    </li>
+  </ul>
+</div>

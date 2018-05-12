@@ -38,17 +38,17 @@ body.landing-page {
   .container{overflow:hidden;}
 
   span.navy {
-    color: $aqua-green;
+    color: $red;
   }
   p.text-color {
     color: $dark-gray-40;
   }
   a.navy-link {
-    color: $aqua-green;
+    color: $red;
     text-decoration: none;
   }
   a.navy-link:hover {
-    color: darken($aqua-green, 5%);
+    color: darken($red, 5%);
   }
   section p {
     color: #aeaeae;
@@ -66,7 +66,7 @@ body.landing-page {
     width: 60px;
     height: 1px;
     margin: 60px auto 0;
-    border-bottom: 2px solid $aqua-green;
+    border-bottom: 2px solid $red;
   }
   /* CUSTOMIZE THE NAVBAR
   -------------------------------------------------- */
@@ -112,11 +112,11 @@ body.landing-page {
   .navbar-default .navbar-nav > .active > a:hover {
     background: transparent;
     color: #fff;
-    border-top: 6px solid $aqua-green;
+    border-top: 6px solid $red;
   }
   .navbar-default .navbar-nav > li > a:hover,
   .navbar-default .navbar-nav > li > a:focus {
-    color: $aqua-green;
+    color: $red;
     background: inherit;
   }
   .navbar-default .navbar-nav > .active > a:focus {
@@ -135,7 +135,7 @@ body.landing-page {
   }
   .navbar-default .navbar-brand:hover,
   .navbar-default .navbar-brand:focus {
-    background: darken($aqua-green, 5%);
+    background: darken($red, 5%);
     color: #fff;
   }
   .navbar-default .navbar-brand {
@@ -143,7 +143,7 @@ body.landing-page {
     height: auto;
     display: block;
     font-size: 14px;
-    background: $aqua-green;
+    background: $red;
     padding: 15px 20px 15px 20px;
     border-radius: 0 0 5px 5px;
     font-weight: 700;
@@ -153,7 +153,7 @@ body.landing-page {
     color: $dark-gray-40;
   }
   .navbar-scroll.navbar-default .nav li a:hover {
-    color: $aqua-green;
+    color: $red;
   }
   .navbar-wrapper .navbar.navbar-scroll {
     padding-top: 0;
@@ -176,7 +176,7 @@ body.landing-page {
 
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover {
-    border-top: 6px solid $aqua-green;
+    border-top: 6px solid $red;
   }
 
   .navbar-fixed-top {
@@ -330,7 +330,7 @@ body.landing-page {
     margin-top: 40px;
   }
   .features small {
-    color: $aqua-green;
+    color: $red;
   }
   .features h2 {
     font-size: 18px;
@@ -343,12 +343,12 @@ body.landing-page {
     font-weight: 200;
   }
   .features-icon {
-    color: $aqua-green;
+    color: $red;
     font-size: 40px;
   }
   .navy-section {
     margin-top: 60px;
-    background: $aqua-green;
+    background: $red;
     color: #fff;
     padding: 20px 0;
   }
@@ -363,7 +363,7 @@ body.landing-page {
     margin: auto;
   }
   .social-icon a {
-    background: $aqua-green;
+    background: $red;
     color: #fff;
     padding: 4px 8px;
     height: 28px;
@@ -372,7 +372,7 @@ body.landing-page {
     border-radius: 50px;
   }
   .social-icon a:hover {
-    background: darken($aqua-green, 5%);
+    background: darken($red, 5%);
   }
   .img-small {
     height: 88px;
@@ -394,7 +394,7 @@ body.landing-page {
   }
   .pricing-plan .pricing-price span {
     font-weight: 700;
-    color: $aqua-green;
+    color: $red;
   }
   li.pricing-desc {
     font-size: 13px;
@@ -402,7 +402,7 @@ body.landing-page {
     padding: 20px 16px;
   }
   li.pricing-title {
-    background: $aqua-green;
+    background: $red;
     color: #fff;
     padding: 10px;
     border-radius: 4px 4px 0 0;
@@ -412,14 +412,14 @@ body.landing-page {
   .testimonials {
     padding-top: 80px;
     padding-bottom: 90px;
-    background-color: $aqua-green;
+    background-color: $red;
     background-image: image-url("landing/avatar_all.png");
   }
   .big-icon {
     font-size: 56px !important;
   }
   .features .big-icon {
-    color: $aqua-green !important;
+    color: $red !important;
   }
   .contact {
     background-image: image-url("landing/word_map.png");
@@ -488,8 +488,8 @@ body.landing-page {
     color: #fff;
   }
   .btn-primary {
-    background-color: $aqua-green;
-    border-color: $aqua-green;
+    background-color: $red;
+    border-color: $red;
     color: #FFFFFF;
     font-size: 14px;
     padding: 10px 20px;
@@ -500,8 +500,8 @@ body.landing-page {
   .btn-primary:active,
   .btn-primary.active,
   .open .dropdown-toggle.btn-primary {
-    background-color: darken($aqua-green, 5%);
-    border-color: darken($aqua-green, 5%);
+    background-color: darken($red, 5%);
+    border-color: darken($red, 5%);
     color: #FFFFFF;
   }
   .btn-primary:active,
@@ -597,7 +597,7 @@ body.landing-page {
     }
 
     .navbar-default .nav li a:hover {
-      color: $aqua-green;
+      color: $red;
     }
 
     .navbar-wrapper .navbar {

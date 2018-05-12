@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Imcg</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>IMCG</title>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="wrapper">
+      <%= render 'layouts/application/sidebar' %>
+
+      <div class="gray-bg" id="page-wrapper">
+        <%= render 'layouts/application/topnavbar' %>
+        <%= yield(:header) if content_for?(:header) %>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+          <div class="row">
+            <div class="col-lg-12">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+
+        <%= render 'layouts/application/footer' %>
+      </div>
+    </div>
+
+    <span data-layout='flash'><%= render 'layouts/application/flash' %></span>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

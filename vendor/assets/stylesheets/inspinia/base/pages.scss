@@ -390,7 +390,7 @@ ul.notes li div {
 }
 
 .category-list li a .text-navy {
-  color: $aqua-green;
+  color: $red;
 }
 
 .category-list li a .text-primary {
@@ -592,7 +592,7 @@ a.compose-mail {
 }
 
 .file-list li a:hover {
-  color: $aqua-green;
+  color: $red;
 }
 
 .user-friends img {
@@ -724,12 +724,12 @@ dd.project-people {
 .faq-question {
   font-size: 18px;
   font-weight: 600;
-  color: $aqua-green;
+  color: $red;
   display: block;
 }
 
 .faq-question:hover {
-  color: darken($aqua-green, 5%);
+  color: darken($red, 5%);
 }
 
 .faq-answer {
@@ -974,7 +974,7 @@ dd.project-people {
 /* ISSUE TRACKER */
 
 .issue-tracker .btn-link {
-  color: $aqua-green;
+  color: $red;
 }
 
 table.issue-tracker tbody tr td {
@@ -1044,7 +1044,7 @@ table.issue-tracker tbody tr td {
 }
 
 .agile-list li.success-element {
-  border-left: 3px solid $aqua-green;
+  border-left: 3px solid $red;
 }
 
 .agile-detail {
@@ -1146,14 +1146,14 @@ table.shoping-cart-table {
 
 .product-name:hover,
 .product-name:focus {
-  color: $aqua-green;
+  color: $red;
 }
 
 .product-price {
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
-  background-color: $aqua-green;
+  background-color: $red;
   padding: 6px 12px;
 
   position: absolute;
@@ -1303,7 +1303,7 @@ table.shoping-cart-table {
 }
 
 .vote-actions a {
-  color: $aqua-green;
+  color: $red;
   font-weight: 600;
 }
 
@@ -1338,7 +1338,7 @@ table.shoping-cart-table {
 }
 
 .vote-info a:hover {
-  color: $aqua-green;
+  color: $red;
 }
 
 .vote-icon {
@@ -1349,7 +1349,7 @@ table.shoping-cart-table {
 }
 
 .vote-icon.active {
-  color: $aqua-green;
+  color: $red;
 }
 
 body.body-small .vote-icon {
