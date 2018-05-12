@@ -17,3 +17,5 @@
 //= require lodash
 //= require cocoon
 //= require_tree .
+//= require_tree ./application/scripts
+//= require_tree ./application

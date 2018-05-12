@@ -1,0 +1,26 @@
+.avatar {
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  margin: 7px 0 0 5px;
+  background-size: cover;
+  background-position: center center;
+
+  &.xs {
+    width: 35px;
+    height: 35px;
+  }
+
+  &.sm {
+    width: 100px;
+    height: 100px;
+  }
+
+  &.lg {
+    width: 160px;
+    height: 160px;
+  }
+}

@@ -1,0 +1,38 @@
+$red: #e00f23;                // Primary color
+$aqua-blue: #23c6c8;          // Info color
+$blue: #1c84c6;               // Success color
+$dark-blue: #2F4050;          // Nav BG
+$yellow: #f8ac59;             // Warning color
+$red: #ED5565;                // Danger color
+$white: #ffffff;
+$whitesmoke: #e7eaec;
+$gray: #f3f3f4;               // Background wrapper color
+$light-gray: #D1DADE;         // Default label, badge
+$blueish-gray: #a7b1c2;
+$dark-gray-10: #c2c2c2;       // Default color
+$dark-gray-40: #676a6c;       // Body text
+$dark-gray-50: #5E5E5E;
+
+// Spinner color and margin
+$spin-color: $red;
+$spin-margin: 0 auto;
+
+// IBOX colors ( default panel colors)
+$border-color: $whitesmoke;     // IBox border
+$ibox-title-bg: $white;     // IBox Background header
+$ibox-content-bg: $white;   // IBox Background content
+
+//Sidebar width
+$sidebar-width: 220px;
+
+// Boxed layout width
+$boxed-width: 1200px;
+$boxed-background: image-url('inspinia/patterns/shattered.png');
+
+//Border radius for buttons
+$btn-border-radius: 3px;
+
+//Navigation
+$nav-bg: $dark-blue;
+$nav-profile-pattern: image-url('inspinia/patterns/header-profile.png');
+$nav-text-color: $blueish-gray;

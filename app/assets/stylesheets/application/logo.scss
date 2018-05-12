@@ -1,0 +1,23 @@
+.metodista-logo {
+  //-webkit-border-radius: 50%;
+  //-webkit-background-clip: padding-box;
+  //-moz-border-radius: 50%;
+  //-moz-background-clip: padding;
+  //border-radius: 50%;
+  //background-clip: padding-box;
+  //margin: 7px 0 0 5px;
+  background-size: contain;
+  background-position: center center;
+  background-image: image-url('metodista-logo.png');
+  background-repeat: no-repeat;
+
+  &.small {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  &.large {
+    min-width: 300px;
+    min-height: 186px;
+  }
+}
