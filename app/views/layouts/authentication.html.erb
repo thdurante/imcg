@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>IMCG</title>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+  <body class="gray-bg">
+    <div class="middle-box text-center animated fadeInDown">
+      <div>
+        <%= link_to(root_path) do %>
+          <div class="metodista-logo large"></div>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+    <span data-layout='flash'><%= render 'layouts/application/flash' %></span>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>
