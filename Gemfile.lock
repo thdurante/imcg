@@ -92,6 +92,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    cpf_cnpj (0.4.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
@@ -305,6 +306,7 @@ DEPENDENCIES
   cocoon (~> 1.2.11)
   codecov (= 0.1.10)
   coffee-rails (~> 4.2)
+  cpf_cnpj (~> 0.4.1)
   database_cleaner (>= 1.6.2)
   enumerated_type (~> 0.5.0)
   factory_bot_rails (~> 4.8.2)
