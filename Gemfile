@@ -20,11 +20,11 @@ gem 'redis-namespace',    '~> 1.6.0'
 gem 'sass-rails',         '~> 5.0'
 gem 'simple_form',        '~> 4.0.0'
 gem 'sprockets-es6',      '~> 0.9.2', require: 'sprockets/es6'
-gem 'tzinfo-data',        '~> 1.2.5', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data',        '~> 1.2.5', platforms: %i(mingw mswin x64_mingw jruby)
 gem 'uglifier',           '>= 1.3.0'
 
 group :development, :test do
-  gem 'byebug',             '~> 10.0', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug',             '~> 10.0', platforms: %i(mri mingw x64_mingw)
   gem 'factory_bot_rails',  '~> 4.8.2'
   gem 'faker',              '~> 1.8.7'
   gem 'pry-rails',          '~> 0.3'
