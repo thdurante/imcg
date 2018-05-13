@@ -1,0 +1,6 @@
+pt-BR:
+  enum:
+    phone_kind:
+      home: Casa
+      mobile: Celular
+      business: Trabalho
