@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Person, type: :model do
+  describe 'associations' do
+    it { is_expected.to have_one(:address).dependent(:destroy) }
+  end
+
   describe 'validations' do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:cpf) }
@@ -13,5 +17,6 @@ RSpec.describe Person, type: :model do
     it { is_expected.to allow_value(CPF.generate(true)).for(:cpf) }
     it { is_expected.not_to allow_value('12345678910').for(:cpf) }
     it { is_expected.not_to allow_value('123.456.789-10').for(:cpf) }
+    it { is_expected.to accept_nested_attributes_for(:address) }
   end
 end
