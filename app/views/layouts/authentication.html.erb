@@ -15,6 +15,9 @@
           <div class="metodista-logo large"></div>
         <% end %>
         <%= yield %>
+        <p class="m-t">
+          <small><%= t('people.index.help_message') %></small>
+        </p>
       </div>
     </div>
     <span data-layout='flash'><%= render 'layouts/application/flash' %></span>
