@@ -12,6 +12,8 @@ RSpec.describe Person, type: :model do
     it { is_expected.to validate_presence_of(:rg) }
     it { is_expected.to validate_uniqueness_of(:cpf).case_insensitive }
     it { is_expected.to allow_value('example@example.com').for(:email) }
+    it { is_expected.to allow_value('').for(:email) }
+    it { is_expected.to allow_value(nil).for(:email) }
     it { is_expected.not_to allow_value('something not a valid email').for(:email) }
     it { is_expected.to allow_value(CPF.generate).for(:cpf) }
     it { is_expected.to allow_value(CPF.generate(true)).for(:cpf) }

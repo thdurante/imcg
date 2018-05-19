@@ -4,7 +4,7 @@ class Person < ApplicationRecord
 
   validates :name, :cpf, :rg, presence: true
   validates :cpf, uniqueness: { case_sensitive: false }
-  validates :email, format: /@/
+  validates :email, format: /@/, allow_blank: true
   validates_with CPFValidator
 
   accepts_nested_attributes_for :address
