@@ -1,0 +1,18 @@
+pt-BR:
+  models_and_attributes: &models_and_attributes
+    models:
+      address:
+        one: Endereço
+        other: Endereços
+    attributes:
+      address:
+        street: Logradouro
+        number: Número
+        complement: Complemento
+        neighborhood: Bairro
+        city: Cidade
+        state: Estado
+  activerecord:
+    <<: *models_and_attributes
+  activemodel:
+    <<: *models_and_attributes
