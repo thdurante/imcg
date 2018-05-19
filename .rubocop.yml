@@ -46,6 +46,10 @@ Metrics/ClassLength:
   CountComments: false
   Max: 1000
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 Metrics/MethodLength:
   Max: 1000
 

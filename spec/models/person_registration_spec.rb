@@ -7,5 +7,6 @@ RSpec.describe PersonRegistration, type: :model do
     it { is_expected.to allow_value(CPF.generate(true)).for(:cpf) }
     it { is_expected.not_to allow_value('12345678910').for(:cpf) }
     it { is_expected.not_to allow_value('123.456.789-10').for(:cpf) }
+    it { is_expected.to validate_with(CPFValidator) }
   end
 end
