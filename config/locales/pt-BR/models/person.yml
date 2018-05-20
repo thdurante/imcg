@@ -12,6 +12,13 @@ pt-BR:
         email: Email
         member: Membro
         occupation: Profissão
+        phones: Telefones
+    errors:
+      models:
+        person:
+          attributes:
+            base:
+              at_least_one: Deve haver pelo menos um telefone
   activerecord:
     <<: *models_and_attributes
   activemodel:
