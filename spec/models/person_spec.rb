@@ -12,17 +12,33 @@ RSpec.describe Person, type: :model do
     it { is_expected.to validate_presence_of(:rg) }
     it { is_expected.to validate_presence_of(:address) }
     it { is_expected.to validate_uniqueness_of(:cpf).case_insensitive }
-    it { is_expected.to allow_value('example@example.com').for(:email) }
-    it { is_expected.to allow_value('').for(:email) }
-    it { is_expected.to allow_value(nil).for(:email) }
-    it { is_expected.not_to allow_value('something not a valid email').for(:email) }
-    it { is_expected.to allow_value(CPF.generate).for(:cpf) }
-    it { is_expected.to allow_value(CPF.generate(true)).for(:cpf) }
-    it { is_expected.not_to allow_value('12345678910').for(:cpf) }
-    it { is_expected.not_to allow_value('123.456.789-10').for(:cpf) }
     it { is_expected.to validate_with(CPFValidator) }
     it { is_expected.to accept_nested_attributes_for(:address) }
     it { is_expected.to accept_nested_attributes_for(:phones).allow_destroy(true) }
+
+    it do
+      is_expected.to allow_values(
+        'example@example.com', '', nil
+      ).for(:email)
+    end
+
+    it do
+      is_expected.not_to allow_values(
+        'something not a valid email'
+      ).for(:email)
+    end
+
+    it do
+      is_expected.to allow_values(
+        CPF.generate, CPF.generate(true)
+      ).for(:cpf)
+    end
+
+    it do
+      is_expected.not_to allow_values(
+        '12345678910', '123.456.789-10'
+      ).for(:cpf)
+    end
 
     describe 'custom/complex validations' do
       describe 'at_least_one_phone' do

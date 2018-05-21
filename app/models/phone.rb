@@ -4,4 +4,5 @@ class Phone < ApplicationRecord
   validates :person, :number, :kind, presence: true
   validates :kind, inclusion: { in: PhoneKind.names }
   validates :number, uniqueness: { scope: :person_id }
+  validates :number, format: /\b\d{8,11}\b/
 end
