@@ -1,0 +1,47 @@
+<h5 class="m-t-lg m-b-md"><%= Address.model_name.human %>:</h5>
+
+<% form.object.build_address unless form.object.address %>
+<%= form.simple_fields_for :address do |a| %>
+  <%= a.input :id, as: :hidden %>
+  <%= a.input :street %>
+
+  <div class="row">
+    <div class="col-xs-9">
+      <%= a.input :complement %>
+    </div>
+    <div class="col-xs-3">
+      <%= a.input :number %>
+    </div>
+  </div>
+
+  <%= a.input :neighborhood %>
+
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <%=
+        a.input :state,
+                collection: CS.states(:br).map(&:reverse!),
+                selected: @person.address.try(:state),
+                placeholder: Address.human_attribute_name(:state),
+                input_html: {
+                  class: 'js-address-state',
+                  'data-component': 'bootstrap-select'
+                }
+      %>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <% city = @person.address.try(:city) %>
+      <%=
+        a.input :city,
+                collection: city ? [[city, city]] : [],
+                disabled: true,
+                selected: @person.address.try(:city),
+                placeholder: Address.human_attribute_name(:city),
+                input_html: {
+                  class: 'js-address-city',
+                  'data-component': 'bootstrap-select'
+                }
+      %>
+    </div>
+  </div>
+<% end %>

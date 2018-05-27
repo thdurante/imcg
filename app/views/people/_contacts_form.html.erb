@@ -1,0 +1,31 @@
+<div>
+  <h5 class="m-t-lg m-b-md"><%= t('people.registration.contacts') %>:</h5>
+  <%= form.input :email %>
+
+  <div class="phones-list">
+    <% form.object.phones.build unless form.object.phones.any? %>
+    <%= form.simple_fields_for :phones do |phones_form| %>
+      <%= render 'phone_fields', f: phones_form %>
+    <% end %>
+    <div class="links">
+      <%=
+        link_to_add_association form,
+                                :phones,
+                                html_options: {
+                                  'data-association-insertion-node': '.phones-list',
+                                  'data-association-insertion-method': 'before'
+                                } do
+      %>
+        <button class="btn btn-sm btn-primary">
+          <%= fa_icon('plus', text: "#{t('general.action.add')} #{Phone.model_name.human}") %>
+        </button>
+      <% end %>
+    </div>
+
+    <% if form.object.errors %>
+      <div class="form-group has-error">
+        <span class="help-block"><%= form.object.errors.messages[:base].try(:first) %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
