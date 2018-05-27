@@ -8,7 +8,7 @@ class Person < ApplicationRecord
   validate :at_least_one_phone
   validates_with CPFValidator
 
-  accepts_nested_attributes_for :address
+  accepts_nested_attributes_for :address, allow_destroy: false
   accepts_nested_attributes_for :phones, allow_destroy: true, reject_if: ->(attr) { attr['number'].blank? }
 
   before_save :normalize_cpf

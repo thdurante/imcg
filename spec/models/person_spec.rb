@@ -13,7 +13,7 @@ RSpec.describe Person, type: :model do
     it { is_expected.to validate_presence_of(:address) }
     it { is_expected.to validate_uniqueness_of(:cpf).case_insensitive }
     it { is_expected.to validate_with(CPFValidator) }
-    it { is_expected.to accept_nested_attributes_for(:address) }
+    it { is_expected.to accept_nested_attributes_for(:address).allow_destroy(false) }
     it { is_expected.to accept_nested_attributes_for(:phones).allow_destroy(true) }
 
     it do
