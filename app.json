@@ -1,6 +1,7 @@
 {
   "name": "imcg",
   "scripts": {
+    "postdeploy": "rails db:schema:load"
   },
   "env": {
     "LANG": {
