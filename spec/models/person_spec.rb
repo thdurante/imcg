@@ -42,15 +42,39 @@ RSpec.describe Person, type: :model do
 
     describe 'custom/complex validations' do
       describe 'at_least_one_phone' do
-        let!(:person) { build(:person, phones: []) }
+        let!(:person) { build(:person, phones: phones) }
         subject! { person.valid? }
 
-        it { is_expected.to be_falsey }
+        context 'person has no phones' do
+          let(:phones) { [] }
 
-        it do
-          expect(
-            person.errors.full_messages
-          ).to eq([I18n.t('activerecord.errors.models.person.attributes.base.at_least_one')])
+          it { is_expected.to be_falsey }
+
+          it do
+            expect(
+              person.errors.full_messages
+            ).to eq([I18n.t('activerecord.errors.models.person.attributes.base.at_least_one')])
+          end
+        end
+
+        context 'person has phones but all of them are marked for destruction' do
+          let(:phones) { build_list(:phone, 3, :marked_for_destruction) }
+
+          it { is_expected.to be_falsey }
+
+          it do
+            expect(
+              person.errors.full_messages
+            ).to eq([I18n.t('activerecord.errors.models.person.attributes.base.at_least_one')])
+          end
+        end
+
+        context 'person has at least one phone' do
+          let(:valid_phone) { build(:phone) }
+          let(:marked_for_destruction_phones) { build_list(:phone, 3, :marked_for_destruction) }
+          let(:phones) { marked_for_destruction_phones << valid_phone }
+
+          it { is_expected.to be_truthy }
         end
       end
     end

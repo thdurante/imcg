@@ -20,6 +20,6 @@ class Person < ApplicationRecord
   end
 
   def at_least_one_phone
-    errors.add(:base, :at_least_one) if phones.blank?
+    errors.add(:base, :at_least_one) if phones.reject(&:marked_for_destruction?).blank?
   end
 end
