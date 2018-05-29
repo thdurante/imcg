@@ -33,9 +33,22 @@ Style/AndOr:
 Style/Alias:
   Enabled: false
 
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%w': '()'
+    '%W': '()'
+    '%i': '()'
+
+Style/SymbolArray:
+  EnforcedStyle: percent
+
 Metrics/ClassLength:
   CountComments: false
   Max: 1000
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
 
 Metrics/MethodLength:
   Max: 1000

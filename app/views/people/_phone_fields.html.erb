@@ -1,0 +1,26 @@
+<div class="row nested-fields">
+  <div class="col-xs-4">
+    <%= f.input :id, as: :hidden %>
+    <%=
+      f.input :kind,
+              collection: PhoneKind.form_options,
+              selected: f.object.try(:kind),
+              placeholder: Phone.human_attribute_name(:kind),
+              input_html: {
+                'data-component': 'bootstrap-select'
+              }
+    %>
+  </div>
+
+  <div class="col-xs-6">
+    <%= f.input :number, input_html: { class: 'js-phone-mask' } %>
+  </div>
+
+  <div class="col-xs-1">
+    <%= link_to_remove_association f do %>
+      <button class="btn btn-primary">
+        <%= fa_icon('trash') %>
+      </button>
+    <% end %>
+  </div>
+</div>

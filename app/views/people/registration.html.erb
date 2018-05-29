@@ -1,0 +1,15 @@
+<div>
+  <%= simple_form_for(@person, url: register_person_path, method: :post, class: 'm-t', defaults: { wrapper_html: { class: 'has-float-label' } }) do |person_form| %>
+    <%= person_form.input :id, as: :hidden %>
+    <%= person_form.input :cpf, readonly: true, input_html: { class: 'js-cpf-mask' } %>
+    <%= person_form.input :name %>
+    <%= person_form.input :rg %>
+    <%= person_form.input :occupation %>
+
+    <%= render 'contacts_form', form: person_form %>
+    <%= render 'address_form', form: person_form %>
+    <%= render 'relations_form', form: person_form %>
+
+    <%= person_form.submit t('general.action.save'), class: 'btn btn-primary block full-width m-b m-t-lg' %>
+  <% end %>
+</div>

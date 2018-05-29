@@ -12,9 +12,12 @@
     <div class="middle-box text-center animated fadeInDown">
       <div>
         <%= link_to(root_path) do %>
-          <div class="metodista-logo large"></div>
+          <div class="metodista-logo large m-b-lg"></div>
         <% end %>
         <%= yield %>
+        <p class="m-t">
+          <small><%= t('people.index.help_message') %></small>
+        </p>
       </div>
     </div>
     <span data-layout='flash'><%= render 'layouts/application/flash' %></span>

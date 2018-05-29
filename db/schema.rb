@@ -10,9 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_05_13_213404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "addresses", force: :cascade do |t|
+    t.string "street"
+    t.string "number"
+    t.string "complement"
+    t.string "neighborhood"
+    t.string "city"
+    t.string "state"
+    t.string "addressable_type"
+    t.bigint "addressable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
+    t.string "cpf"
+    t.string "rg"
+    t.string "email"
+    t.boolean "member", default: false
+    t.string "occupation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cpf"], name: "index_people_on_cpf", unique: true
+  end
+
+  create_table "phones", force: :cascade do |t|
+    t.string "number"
+    t.string "kind"
+    t.bigint "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id", "number"], name: "index_phones_on_person_id_and_number", unique: true
+    t.index ["person_id"], name: "index_phones_on_person_id"
+  end
+
+  add_foreign_key "phones", "people"
 end

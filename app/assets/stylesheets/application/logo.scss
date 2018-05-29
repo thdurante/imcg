@@ -8,8 +8,17 @@
   //margin: 7px 0 0 5px;
   background-size: contain;
   background-position: center center;
-  background-image: image-url('metodista-logo.png');
+  background-image: image-url('logo-imcg.png');
   background-repeat: no-repeat;
+
+  &.white {
+    background-image: image-url('logo-imcg-branco.png');
+  }
+
+  &.medium {
+    min-width: 170px;
+    min-height: 88.54px;
+  }
 
   &.small {
     min-width: 48px;

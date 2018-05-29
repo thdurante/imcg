@@ -4,4 +4,7 @@
 //= require inspinia/plugins/toastr/toastr.min
 //= require inspinia/plugins/iCheck/icheck.min
 //= require inspinia/plugins/datepicker/bootstrap-datepicker
+//= require inspinia/plugins/jQueryMask/jquery.mask.min
+//= require inspinia/plugins/select2/select2.full.min
+//= require inspinia/plugins/bootstrap-select/bootstrap-select
 //= require inspinia/initialize-inspinia

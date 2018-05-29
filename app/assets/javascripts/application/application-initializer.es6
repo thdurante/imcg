@@ -2,7 +2,11 @@ $(function () {
   const components = [
     new Datepicker(),
     new FlashMessage(),
-    new ICheck()
+    new ICheck(),
+    new JQueryMask(),
+    new Select2(),
+    new BootstrapSelect(),
+    new StateCitySelect()
   ]
 
   components.forEach((component) => {

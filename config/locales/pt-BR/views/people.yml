@@ -1,0 +1,9 @@
+pt-BR:
+  people:
+    index:
+      welcome_message: 'Seja bem vindo(a)!'
+      system_message: 'Esse é o nosso sistema de cadastramento e controle de membros. Para realizar ou atualizar seu cadastro, insira o CPF no campo abaixo e clique em "Avançar".'
+      help_message: 'IMCG - Igreja Metodista Central de Goiânia.'
+    registration:
+      contacts: Contatos
+      relations: Vínculos com a IMCG

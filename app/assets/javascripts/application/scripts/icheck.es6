@@ -10,8 +10,8 @@ class ICheck {
   iCheckOptions() {
     return (
       {
-        checkboxClass: 'icheckbox_square-green',
-        radioClass: 'iradio_square-green'
+        checkboxClass: 'icheckbox_square-red',
+        radioClass: 'iradio_square-red'
       }
     )
   }
