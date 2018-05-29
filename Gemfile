@@ -5,7 +5,7 @@ ruby '2.5.1'
 
 gem 'bootsnap',           '>= 1.1.0', require: false
 gem 'bootstrap-sass',     '~> 3.3.7'
-gem 'city-state',         '~> 0.0.13'
+gem 'city-state',         '~> 0.0.13', github: 'thdurante/city-state', branch: 'cs-update'
 gem 'cocoon',             '~> 1.2.11'
 gem 'coffee-rails',       '~> 4.2'
 gem 'cpf_cnpj',           '~> 0.4.1', require: true
