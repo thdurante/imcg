@@ -1,7 +1,7 @@
 {
   "name": "imcg",
   "scripts": {
-    "postdeploy": "rails db:schema:load"
+    "postdeploy": "bundle exec rails db:migrate"
   },
   "env": {
     "LANG": {
