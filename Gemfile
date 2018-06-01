@@ -55,3 +55,7 @@ group :test do
   gem 'simplecov',                '~> 0.16.1', require: false
   gem 'webmock',                  '~> 3.3.0'
 end
+
+group :production do
+  gem 'newrelic_rpm', '~> 5.1.0'
+end
