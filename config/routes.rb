@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'people#index'
 
+  devise_for :users
+
   get  'addresses/cities',    to: 'addresses#cities'
   get  'dashboards/admin',    to: 'dashboards#admin'
   get  'dashboards/',         to: 'dashboards#index'
