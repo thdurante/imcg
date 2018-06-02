@@ -18,6 +18,7 @@ gem 'pg',                 '~> 1.0'
 gem 'puma',               '~> 3.11'
 gem 'rails',              '~> 5.2.0'
 gem 'redis-namespace',    '~> 1.6.0'
+gem 'rollbar',            '~> 2.16.0'
 gem 'sass-rails',         '~> 5.0'
 gem 'simple_form',        '~> 4.0.0'
 gem 'sprockets-es6',      '~> 0.9.2', require: 'sprockets/es6'
@@ -53,4 +54,8 @@ group :test do
   gem 'shoulda-matchers',         '~> 3.1'
   gem 'simplecov',                '~> 0.16.1', require: false
   gem 'webmock',                  '~> 3.3.0'
+end
+
+group :production do
+  gem 'newrelic_rpm', '~> 5.1.0'
 end
