@@ -11,6 +11,7 @@ gem 'coffee-rails',       '~> 4.2'
 gem 'cpf_cnpj',           '~> 0.4.1', require: true
 gem 'devise',             '~> 4.4.3'
 gem 'enumerated_type',    '~> 0.5.0'
+gem 'figaro',             '~> 1.1.1'
 gem 'font-awesome-rails', '~> 4.7.0'
 gem 'gretel',             '~> 3.0.9'
 gem 'jquery-rails',       '~> 4.3.3'

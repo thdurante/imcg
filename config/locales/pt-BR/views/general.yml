@@ -1,6 +1,9 @@
 pt-BR:
   general:
+    enter_restricted_message: 'Para entrar no sistema interno, '
+    imcg_restricted: 'IMCG - Interno (Pastores e Líderes)'
     action:
+      back: Voltar
       continue: Avançar
       save: Salvar
       delete: Remover
@@ -8,3 +11,7 @@ pt-BR:
       add: Adicionar
       insert: Inserir
       select: Selecione...
+      sign_up: Cadastrar
+      sign_in: Entrar
+      sign_out: Sair
+      click_here: clique aqui.

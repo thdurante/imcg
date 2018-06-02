@@ -9,14 +9,24 @@
     <%= csp_meta_tag %>
   </head>
   <body class="gray-bg">
-    <div class="middle-box text-center animated fadeInDown">
+    <div class="middle-box text-center animated fadeInDown" style="padding: 40px 5px;">
       <div>
         <%= link_to(root_path) do %>
           <div class="metodista-logo large m-b-lg"></div>
         <% end %>
         <%= yield %>
-        <p class="m-t">
-          <small><%= t('people.index.help_message') %></small>
+        <p class="m-t-n m-b-xl">
+          <small>
+            <% if devise_controller? %>
+              <p class="m-t-lg">---<br/><%= t('people.index.help_message') %></p>
+            <% else %>
+              <p class="m-b-xs">---<br/><strong><%= t('general.imcg_restricted') %></strong></p>
+              <p>
+                <%= t('general.enter_restricted_message') %>
+                <%= link_to t('general.action.click_here'), user_session_path %>
+              </p>
+            <% end %>
+          </small>
         </p>
       </div>
     </div>

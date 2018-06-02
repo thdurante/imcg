@@ -1,6 +1,7 @@
 class PeopleController < ApplicationController
   layout 'authentication'
 
+  skip_before_action :authenticate_user!
   before_action :validate_person_registration, only: :registration
   before_action :set_person_by_cpf, only: %i(registration create_or_update_registration)
 

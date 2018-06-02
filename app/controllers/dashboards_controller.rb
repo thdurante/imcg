@@ -1,4 +1,6 @@
 class DashboardsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def index
     flash.now[:notice] = 'Mensagem exemplo de sucesso!'
     render layout: 'authentication'

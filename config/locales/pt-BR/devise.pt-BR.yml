@@ -2,6 +2,11 @@
 # pt-BR translations for Devise
 pt-BR:
   devise:
+    links:
+      forgot_password: 'Esqueceu sua senha?'
+      did_not_receive_confirmation: 'Não recebeu as instruções de confirmação?'
+      did_not_receive_unlock: 'Não recebeu as instruções de desbloqueio?'
+      omniauth: 'Entrar com %{provider}'
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso. Você está logado."
       send_instructions: "Dentro de minutos, você receberá um e-mail com instruções para a confirmação da sua conta."
@@ -40,6 +45,13 @@ pt-BR:
       signed_up_but_unconfirmed: "Uma mensagem com um link de confirmação foi enviada para o seu endereço de e-mail. Por favor, abra o link para confirmar a sua conta."
       update_needs_confirmation: "Você atualizou a sua conta com sucesso, mas o seu novo endereço de e-mail precisa ser confirmado. Por favor, acesse-o e clique no link de confirmação que enviamos."
       updated: "Sua conta foi atualizada com sucesso."
+      new:
+        title: 'Área de cadastro IMCG - Interno'
+        message: 'Através do formulário abaixo é possível cadastrar responsáveis pela administração e funcionamento da igreja (Pastores, líderes, etc.). Estes usuários passam por um processo prévio de aprovação e, assim que aprovados, possuem acesso às zonas restritas do sistema.'
+        warning_message: '<strong>Para solicitação do cadastro abaixo, o usuário deve ter feito previamente seu '
+        warning_message_link: 'cadastro como membro. </strong>'
+      create:
+        cpf_alert: 'Não foi possível encontrar a pessoa com o CPF informado! Complete o cadastro de membro antes de uma nova solicitação.'
     sessions:
       signed_in: "Login efetuado com sucesso!"
       signed_out: "Saiu com sucesso."
