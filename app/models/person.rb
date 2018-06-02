@@ -1,4 +1,5 @@
 class Person < ApplicationRecord
+  has_one :user, dependent: :restrict_with_error
   has_one :address, as: :addressable, dependent: :destroy
   has_many :phones, dependent: :destroy, inverse_of: :person
 
