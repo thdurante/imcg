@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  root 'people#index'
-
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
+
+  authenticated :user do
+    root 'dashboards#admin', as: :authenticated_root
+  end
+
+  root 'people#index'
 
   get  'addresses/cities',    to: 'addresses#cities'
   get  'dashboards/admin',    to: 'dashboards#admin'

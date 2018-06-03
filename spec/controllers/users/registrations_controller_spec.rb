@@ -57,7 +57,7 @@ RSpec.describe Users::RegistrationsController, type: :controller do
       end
 
       it 'sets a success flash message' do
-        expect(flash[:notice]).to eq(I18n.t('devise.registrations.signed_up_but_unconfirmed'))
+        expect(flash[:notice]).to eq(I18n.t('devise.registrations.signed_up_but_not_approved'))
       end
     end
 

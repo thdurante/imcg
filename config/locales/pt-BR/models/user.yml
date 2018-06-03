@@ -12,6 +12,8 @@ pt-BR:
         username: Nome de usuário
         approved_at: Aprovado em
         person: Pessoa
+        remember_me: Lembrar-me
+        reset_password_token: Token de redefinição de senha
   activerecord:
     <<: *models_and_attributes
   activemodel:
