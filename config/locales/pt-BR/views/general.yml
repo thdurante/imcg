@@ -2,6 +2,7 @@ pt-BR:
   general:
     enter_restricted_message: 'Para entrar no sistema interno, '
     imcg_restricted: 'IMCG - Interno (Pastores e Líderes)'
+    no_record: 'Nenhum(a) %{record} encontrado(a) no banco de dados.'
     action:
       back: Voltar
       continue: Avançar
@@ -9,6 +10,8 @@ pt-BR:
       delete: Remover
       edit: Editar
       add: Adicionar
+      new: Novo
+      new_record: 'Novo(a) %{record}'
       insert: Inserir
       select: Selecione...
       sign_up: Cadastrar

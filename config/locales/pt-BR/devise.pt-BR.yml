@@ -9,7 +9,7 @@ pt-BR:
       omniauth: 'Entrar com %{provider}'
     confirmations:
       new:
-        explanation: 'Ainda não recebeu as instruções de confirmação da sua senha? Preencha o formulário abaixo e lhe enviaremos novamente as instruções de confirmação em seu email.'
+        explanation: 'Ainda não recebeu as instruções de confirmação da sua conta? Preencha o formulário abaixo e lhe enviaremos novamente as instruções de confirmação em seu email.'
         button: 'Reenviar instruções de confirmação'
       confirmed: "Sua conta foi confirmada com sucesso."
       send_instructions: "Dentro de minutos, você receberá um e-mail com instruções para a confirmação da sua conta."
