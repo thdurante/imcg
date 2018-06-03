@@ -8,6 +8,9 @@ pt-BR:
       did_not_receive_unlock: 'Não recebeu as instruções de desbloqueio?'
       omniauth: 'Entrar com %{provider}'
     confirmations:
+      new:
+        explanation: 'Ainda não recebeu as instruções de confirmação da sua senha? Preencha o formulário abaixo e lhe enviaremos novamente as instruções de confirmação em seu email.'
+        button: 'Reenviar instruções de confirmação'
       confirmed: "Sua conta foi confirmada com sucesso."
       send_instructions: "Dentro de minutos, você receberá um e-mail com instruções para a confirmação da sua conta."
       send_paranoid_instructions: "Se o seu endereço de e-mail estiver cadastrado, você receberá uma mensagem com instruções para confirmação da sua conta."
