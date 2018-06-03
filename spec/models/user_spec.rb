@@ -20,22 +20,9 @@ RSpec.describe User, type: :model do
   end
 
   describe 'instance methods' do
-    describe '#approved?' do
-      let!(:approved_user) { create(:user) }
-      let!(:not_approved_user) { create(:user, approved_at: nil) }
-
-      it 'returns true when user is approved' do
-        expect(approved_user.approved?).to be_truthy
-      end
-
-      it 'returns false when user is not approved' do
-        expect(not_approved_user.approved?).to be_falsey
-      end
-    end
-
     describe '#active_for_authentication?' do
-      let!(:active_user) { create(:user, approved_at: Time.current) }
-      let!(:inactive_user) { create(:user, approved_at: nil) }
+      let!(:active_user) { create(:user, approved: true) }
+      let!(:inactive_user) { create(:user, approved: false) }
 
       it 'returns true for an active user' do
         expect(active_user.active_for_authentication?).to be_truthy
@@ -47,8 +34,8 @@ RSpec.describe User, type: :model do
     end
 
     describe '#inactive_message' do
-      let!(:confirmed_not_approved_user) { create(:user, confirmed_at: Time.current, approved_at: nil) }
-      let!(:not_confirmed_approved_user) { create(:user, confirmed_at: nil, approved_at: Time.current) }
+      let!(:confirmed_not_approved_user) { create(:user, confirmed_at: Time.current, approved: false) }
+      let!(:not_confirmed_approved_user) { create(:user, confirmed_at: nil, approved: true) }
 
       it 'returns the proper message for confirmed not approved user' do
         expect(confirmed_not_approved_user.inactive_message).to eq(:not_approved)

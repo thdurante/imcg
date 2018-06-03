@@ -10,8 +10,9 @@ pt-BR:
         password: Senha
         password_confirmation: Confirmação de senha
         username: Nome de usuário
-        approved_at: Aprovado em
+        approved: Aprovado?
         person: Pessoa
+        confirmed_at: Confirmado em
         remember_me: Lembrar-me
         reset_password_token: Token de redefinição de senha
   activerecord:

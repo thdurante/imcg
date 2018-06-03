@@ -5,6 +5,6 @@ FactoryBot.define do
     sequence(:username) { |n| "user-#{n}" }
     password { Faker::Internet.password }
     confirmed_at { Time.current }
-    approved_at { Time.current }
+    approved { false }
   end
 end
