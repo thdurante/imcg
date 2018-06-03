@@ -6,8 +6,13 @@
 
     <ul class="nav navbar-top-links navbar-right">
       <li>
-        <%= link_to destroy_user_session_path, method: :delete do %>
-          <%= fa_icon 'sign-out', text: t('general.action.sign_out') %>
+        <%= link_to edit_user_path(current_user), data: { component: 'tooltip', placement: 'bottom', title: t('general.action.edit_profile') } do %>
+          <span class="text-muted welcome-message"><%= "@#{current_user.username}" %></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to destroy_user_session_path, data: { component: 'tooltip', placement: 'bottom', title: t('general.action.sign_out') }, method: :delete do %>
+          <%= fa_icon 'sign-out' %>
         <% end %>
       </li>
     </ul>

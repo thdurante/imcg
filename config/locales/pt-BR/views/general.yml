@@ -11,6 +11,7 @@ pt-BR:
       edit: Editar
       add: Adicionar
       new: Novo
+      edit_profile: Editar perfil
       new_record: 'Novo(a) %{record}'
       insert: Inserir
       select: Selecione...
