@@ -2,7 +2,7 @@
 <p class="m-b-md"><%= t('.message') %></p>
 <p class="m-b-lg text-primary">
   <%= t('.warning_message').html_safe %>
-  <%= link_to t('.warning_message_link').html_safe, people_path %>
+  <%= link_to t('.warning_message_link').html_safe, people_members_form_path %>
 </p>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), defaults: { wrapper_html: { class: 'has-float-label' } }) do |f| %>

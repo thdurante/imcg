@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
   before_action :validate_person_registration, only: :registration
   before_action :set_person_by_cpf, only: %i(registration create_or_update_registration)
 
-  def index
+  def members_form
     @person_registration = PersonRegistration.new
   end
 
@@ -24,7 +24,7 @@ class PeopleController < ApplicationController
 
   def validate_person_registration
     @person_registration = PersonRegistration.new(person_registration_params)
-    render :index unless @person_registration.valid?
+    render :members_form unless @person_registration.valid?
   end
 
   def set_person_by_cpf

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe PeopleController, type: :controller do
-  describe 'GET #index' do
-    subject! { get :index }
+  describe 'GET #members_form' do
+    subject! { get :members_form }
 
     it 'renders the authentication layout' do
       is_expected.to render_template(:authentication)
@@ -82,8 +82,8 @@ RSpec.describe PeopleController, type: :controller do
         }
       end
 
-      it 'renders :index' do
-        is_expected.to render_template(:index)
+      it 'renders :members_form' do
+        is_expected.to render_template(:members_form)
       end
     end
   end

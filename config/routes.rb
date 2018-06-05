@@ -7,10 +7,10 @@ Rails.application.routes.draw do
     root 'users#edit', as: :authenticated_root
   end
 
-  root 'people#index'
+  root 'people#members_form'
 
   get  'addresses/cities',    to: 'addresses#cities'
-  get  'people/',             to: 'people#index'
+  get  'people/members_form', to: 'people#members_form'
   get  'people/registration', to: 'people#registration',                  as: :person_registration
   post 'people/register',     to: 'people#create_or_update_registration', as: :register_person
 
