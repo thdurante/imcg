@@ -6,7 +6,7 @@
 
     <ul class="nav navbar-top-links navbar-right">
       <li>
-        <%= link_to edit_user_path(current_user), data: { component: 'tooltip', placement: 'bottom', title: t('general.action.edit_profile') } do %>
+        <%= link_to edit_user_path(current_user), data: { component: 'tooltip', placement: 'bottom', title: t('general.my_profile') } do %>
           <span class="text-muted welcome-message"><%= "@#{current_user.username}" %></span>
         <% end %>
       </li>

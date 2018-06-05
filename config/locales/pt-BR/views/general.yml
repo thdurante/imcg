@@ -3,6 +3,8 @@ pt-BR:
     enter_restricted_message: 'Para entrar no sistema interno, '
     imcg_restricted: 'IMCG - Interno (Pastores e Líderes)'
     no_record: 'Nenhum(a) %{record} encontrado(a) no banco de dados.'
+    my_profile: Meu perfil
+    members_form: cadastro de membro
     action:
       back: Voltar
       continue: Avançar
@@ -11,7 +13,6 @@ pt-BR:
       edit: Editar
       add: Adicionar
       new: Novo
-      edit_profile: Editar perfil
       new_record: 'Novo(a) %{record}'
       insert: Inserir
       select: Selecione...

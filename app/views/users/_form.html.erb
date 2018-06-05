@@ -1,0 +1,20 @@
+<%= simple_form_for(current_user, method: :patch) do |f| %>
+  <div class="row m-b-md">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <%= f.input :email, readonly: true %>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <%= f.input :username %>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <%= f.input :password %>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <%= f.input :password_confirmation %>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= link_to t('general.action.back'), :back, class: 'btn btn-default' %>
+    <%= f.submit t('general.action.save'), class: 'btn btn-primary' %>
+  </div>
+<% end %>

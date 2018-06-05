@@ -1,0 +1,24 @@
+<% breadcrumb :user, current_user %>
+<%= header(current_user.name) %>
+
+<div class="ibox float-e-margins">
+  <div class="ibox-title">
+    <h3><%= User.model_name.human %></h3>
+  </div>
+  <div class="ibox-content">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="m-b-md">
+          <%= t('.welcome_message') %> <strong>@<%= current_user.username %></strong> !<br/>
+          <%= t('.members_form_explanation') %>
+          <strong>
+            <%= link_to t('general.members_form'), person_registration_path(person_registration: { cpf: current_user.cpf }), method: :get %>
+          </strong>
+        </p>
+        <p class="m-b-xl"><%= t('.users_form_exaplanation').html_safe %></p>
+
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
