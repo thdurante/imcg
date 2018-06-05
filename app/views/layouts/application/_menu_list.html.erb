@@ -1,7 +1,3 @@
-<li class="<%= 'active' if controller_path == 'dashboards' %>">
-  <%= link_to(fa_icon('th-large', text: content_tag(:span, 'Dashboard', class: 'nav-label')), dashboards_admin_path) %>
-</li>
-
 <li class="<%= 'active' if controller_path == 'users' && controller.action_name == 'edit' %>">
   <%= link_to(fa_icon('user-circle', text: content_tag(:span, t('general.my_profile'), class: 'nav-label')), edit_user_path(current_user)) %>
 </li>

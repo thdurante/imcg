@@ -4,14 +4,12 @@ Rails.application.routes.draw do
   }
 
   authenticated :user do
-    root 'dashboards#admin', as: :authenticated_root
+    root 'users#edit', as: :authenticated_root
   end
 
   root 'people#index'
 
   get  'addresses/cities',    to: 'addresses#cities'
-  get  'dashboards/admin',    to: 'dashboards#admin'
-  get  'dashboards/',         to: 'dashboards#index'
   get  'people/',             to: 'people#index'
   get  'people/registration', to: 'people#registration',                  as: :person_registration
   post 'people/register',     to: 'people#create_or_update_registration', as: :register_person
