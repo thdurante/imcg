@@ -9,7 +9,7 @@
   <dd><%= user.email %></dd>
 
   <dt><%= User.human_attribute_name(:confirmed_at) %>:</dt>
-  <dd><%= l(user.confirmed_at, format: :short) %></dd>
+  <dd><%= l(user.confirmed_at, format: :short) if user.confirmed_at %></dd>
 
   <dt><%= User.human_attribute_name(:approved) %>:</dt>
   <dd><%= fa_icon('check') if user.approved? %></dd>
