@@ -6,6 +6,9 @@ pt-BR:
     my_profile: Meu perfil
     members_form: cadastro de membro
     action:
+      actions: Ações
+      details: Detalhes
+      close: Fechar
       back: Voltar
       continue: Avançar
       save: Salvar

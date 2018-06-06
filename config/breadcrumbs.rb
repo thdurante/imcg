@@ -16,3 +16,8 @@ crumb :user do |user|
   user.persisted? ? link(user.name) : link(I18n.t('general.action.new'))
   parent :users
 end
+
+crumb :people do
+  link Person.model_name.human(count: 2), people_path
+  parent :root
+end

@@ -1,7 +1,32 @@
 require 'rails_helper'
 
 RSpec.describe PeopleController, type: :controller do
-  describe 'GET #members_form' do
+  include_context 'authentication context'
+
+  describe 'GET #index' do
+    let!(:people) { create_list(:person, 3) }
+    subject { get :index }
+
+    context 'authenticated user' do
+      it 'returns http success' do
+        is_expected.to be_successful
+      end
+
+      it 'renders the correct layout' do
+        is_expected.to render_template(:application)
+      end
+
+      it 'assigns people as @people' do
+        expect(assigns(:people)).to match_array(people << user.person)
+      end
+    end
+
+    context 'unauthenticated user' do
+      include_examples 'shared examples for unauthenticated user'
+    end
+  end
+
+  describe 'GET #members_form', :skip_sign_in do
     subject! { get :members_form }
 
     it 'renders the authentication layout' do
@@ -17,7 +42,7 @@ RSpec.describe PeopleController, type: :controller do
     end
   end
 
-  describe 'GET #registration' do
+  describe 'GET #registration', :skip_sign_in do
     subject! { get :registration, params: params }
 
     describe 'valid params' do
@@ -31,6 +56,10 @@ RSpec.describe PeopleController, type: :controller do
 
       context 'new registration' do
         let(:person_cpf) { CPF.generate(true) }
+
+        it 'renders the authentication layout' do
+          is_expected.to render_template(:authentication)
+        end
 
         it 'assigns a new PersonRegistration as @person_registration' do
           person_registration = assigns(:person_registration)
@@ -55,6 +84,10 @@ RSpec.describe PeopleController, type: :controller do
       context 'already existing registration' do
         let!(:person) { create(:person) }
         let(:person_cpf) { person.cpf }
+
+        it 'renders the authentication layout' do
+          is_expected.to render_template(:authentication)
+        end
 
         it 'assigns a new PersonRegistration as @person_registration' do
           person_registration = assigns(:person_registration)
@@ -88,13 +121,9 @@ RSpec.describe PeopleController, type: :controller do
     end
   end
 
-  describe 'POST #create_or_update_registration' do
+  describe 'POST #create_or_update_registration', :skip_sign_in do
     subject do
       post :create_or_update_registration, params: { person: params }
-    end
-
-    before do |example|
-      subject unless example.metadata[:skip_before_hook]
     end
 
     describe 'valid params' do

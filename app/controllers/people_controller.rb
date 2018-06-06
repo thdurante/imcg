@@ -1,9 +1,13 @@
 class PeopleController < ApplicationController
-  layout 'authentication'
+  layout :resolve_layout
 
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: %i(members_form registration create_or_update_registration)
   before_action :validate_person_registration, only: :registration
   before_action :set_person_by_cpf, only: %i(registration create_or_update_registration)
+
+  def index
+    @people = Person.includes(:user, :phones, :address).all.order(name: :asc).page(params[:page])
+  end
 
   def members_form
     @person_registration = PersonRegistration.new
@@ -21,6 +25,10 @@ class PeopleController < ApplicationController
   end
 
   private
+
+  def resolve_layout
+    action_name == 'index' ? 'application' : 'authentication'
+  end
 
   def validate_person_registration
     @person_registration = PersonRegistration.new(person_registration_params)

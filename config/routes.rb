@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get  'people/registration', to: 'people#registration',                  as: :person_registration
   post 'people/register',     to: 'people#create_or_update_registration', as: :register_person
 
-  resources :users, only: %i(index edit update)
+  resources :users,  only: %i(index edit update)
+  resources :people, only: %i(index)
 end

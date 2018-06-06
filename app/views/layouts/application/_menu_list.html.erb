@@ -6,6 +6,10 @@
   <%= link_to(fa_icon('at', text: content_tag(:span, User.model_name.human(count: 2), class: 'nav-label')), users_path) %>
 </li>
 
+<li class="<%= 'active' if controller_path == 'people' %>">
+  <%= link_to(fa_icon('users', text: content_tag(:span, Person.model_name.human(count: 2), class: 'nav-label')), people_path) %>
+</li>
+
 <li>
   <%= link_to(fa_icon('edit', text: content_tag(:span, 'Cadastramento', class: 'nav-label')), person_registration_path) %>
 </li>

@@ -1,0 +1,21 @@
+<dl class="dl-horizontal">
+  <dt><h2><%= t('general.action.details') %>:</h2></dt><dd></dd>
+
+  <dt><%= Person.human_attribute_name(:name) %>:</dt>
+  <dd><%= person.name %></dd>
+
+  <dt><%= Person.human_attribute_name(:cpf) %>:</dt>
+  <dd><%= CPF.new(person.cpf).formatted %></dd>
+
+  <dt><%= Person.human_attribute_name(:rg) %>:</dt>
+  <dd><%= person.rg %></dd>
+
+  <dt><%= Person.human_attribute_name(:email) %>:</dt>
+  <dd><%= person.email %></dd>
+
+  <dt><%= Person.human_attribute_name(:occupation) %>:</dt>
+  <dd><%= person.occupation %></dd>
+
+  <dt><%= Person.human_attribute_name(:member) %>:</dt>
+  <dd><%= fa_icon('check') if person.member %></dd>
+</dl>

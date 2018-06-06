@@ -1,0 +1,26 @@
+<div class="modal inmodal" id="<%= "person-#{person.id}-detail" %>" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content animated flipInY">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+        </button>
+        <%= fa_icon('user-o', class: 'modal-icon') %>
+        <h4 class="modal-title"><%= person.name %></h4>
+        <small><%= t('people.index.modal_subtitle') %></small>
+      </div>
+
+      <div class="modal-body">
+        <%= render 'people/details/general_details', person: person %>
+        <%= render 'people/details/phones', phones: person.phones %>
+        <%= render 'people/details/address', address: person.address %>
+        <%= render 'people/details/user', user: person.user if person.user %>
+      </div>
+
+      <div class="modal-footer">
+        <%= button_tag t('general.action.close'), class: 'btn btn-white', data: { dismiss: 'modal' }, style: 'margin-bottom: 0px;' %>
+        <%= link_to t('general.action.edit'), person_registration_path(person_registration: { cpf: person.cpf }), method: :get, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>
