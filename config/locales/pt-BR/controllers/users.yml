@@ -1,0 +1,4 @@
+pt-BR:
+  users:
+    update:
+      notice: 'Usuário atualizado com sucesso!'

@@ -1,0 +1,9 @@
+<div>
+  <h3 class="m-b-md"><%= t('.welcome_message') %></h3>
+  <p class="m-b-lg"><%= t('.system_message') %></p>
+
+  <%= simple_form_for(@person_registration, url: person_registration_path, method: :get, class: 'm-t', defaults: { wrapper_html: { class: 'has-float-label' } }) do |f| %>
+    <%= f.input :cpf, input_html: { class: 'js-cpf-mask' } %>
+    <%= f.submit t('general.action.continue'), class: 'btn btn-primary block full-width m-b' %>
+  <% end %>
+</div>

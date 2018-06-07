@@ -7,4 +7,5 @@
 //= require inspinia/plugins/jQueryMask/jquery.mask.min
 //= require inspinia/plugins/select2/select2.full.min
 //= require inspinia/plugins/bootstrap-select/bootstrap-select
+//= require inspinia/plugins/switchery/switchery
 //= require inspinia/initialize-inspinia

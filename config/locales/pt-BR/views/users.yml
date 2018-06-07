@@ -1,0 +1,6 @@
+pt-BR:
+  users:
+    edit:
+      welcome_message: 'Bem vindo(a)'
+      members_form_explanation: 'Para alterar seus dados pessoais como o nome, endereço, profissão, ou mesmo seus dados de contato, por favor utilize o'
+      users_form_exaplanation: 'Abaixo é possível alterar as informações de acesso da sua conta.<br/>Caso não deseje alterar sua senha, simplesmente deixe os campos de senha vazios.'

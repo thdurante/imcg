@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Person, type: :model do
   describe 'associations' do
+    it { is_expected.to have_one(:user).dependent(:restrict_with_error) }
     it { is_expected.to have_one(:address).dependent(:destroy) }
     it { is_expected.to have_many(:phones).dependent(:destroy).inverse_of(:person) }
   end

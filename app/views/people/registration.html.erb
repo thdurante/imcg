@@ -10,6 +10,7 @@
     <%= render 'address_form', form: person_form %>
     <%= render 'relations_form', form: person_form %>
 
-    <%= person_form.submit t('general.action.save'), class: 'btn btn-primary block full-width m-b m-t-lg' %>
+    <%= person_form.submit t('general.action.save'), class: 'btn btn-primary block full-width m-b-sm m-t-lg' %>
+    <%= link_to t('general.action.back'), :back, class: 'btn btn-default block full-width' %>
   <% end %>
 </div>

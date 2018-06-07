@@ -1,0 +1,21 @@
+<%= render 'devise/shared/title' %>
+<p class="m-b-md"><%= t('.message') %></p>
+<p class="m-b-lg text-primary">
+  <%= t('.warning_message').html_safe %>
+  <%= link_to t('.warning_message_link').html_safe, people_members_form_path %>
+</p>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), defaults: { wrapper_html: { class: 'has-float-label' } }) do |f| %>
+  <%= simple_fields_for(:person, defaults: { wrapper_html: { class: 'has-float-label' } }) do |person_form| %>
+    <%= person_form.input :cpf, required: true, input_html: { class: 'js-cpf-mask', value: resource.person.try(:cpf) } %>
+  <% end %>
+
+  <%= f.input :email, required: true %>
+  <%= f.input :username, required: true %>
+  <%= f.input :password, required: true %>
+  <%= f.input :password_confirmation, required: true %>
+
+  <%= f.submit t('general.action.sign_up'), class: 'btn btn-primary block full-width m-b' %>
+<% end %>
+
+<%= render 'devise/shared/links' %>

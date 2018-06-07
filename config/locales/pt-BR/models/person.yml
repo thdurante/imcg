@@ -6,11 +6,12 @@ pt-BR:
         other: Pessoas
     attributes:
       person:
+        user: Admin?
         name: Nome
         cpf: CPF
         rg: RG
         email: Email
-        member: Membro
+        member: Membro?
         occupation: Profissão
         phones: Telefones
     errors:

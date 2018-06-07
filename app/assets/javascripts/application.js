@@ -16,6 +16,8 @@
 //= require bootstrap-sprockets
 //= require lodash
 //= require cocoon
+//= require moment
+//= require bootstrap-sortable
 //= require_tree .
 //= require_tree ./application/scripts
 //= require_tree ./application

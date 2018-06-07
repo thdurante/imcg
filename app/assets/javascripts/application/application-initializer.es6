@@ -6,7 +6,9 @@ $(function () {
     new JQueryMask(),
     new Select2(),
     new BootstrapSelect(),
-    new StateCitySelect()
+    new StateCitySelect(),
+    new SwitcheryComponent(),
+    new TooltipComponent()
   ]
 
   components.forEach((component) => {

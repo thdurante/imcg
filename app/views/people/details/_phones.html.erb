@@ -1,0 +1,9 @@
+<dl class="dl-horizontal">
+  <dt><h2><%= Phone.model_name.human(count: 2) %>:</h2></dt><dd></dd>
+  <% phones.each do |phone| %>
+    <% phone_kind = PhoneKind.coerce(phone.kind) %>
+
+    <dt><%= fa_icon(phone_kind.icon) %>&nbsp;&nbsp;<%= phone_kind.label %>:</dt>
+    <dd><%= phone.number %></dd>
+  <% end %>
+</dl>

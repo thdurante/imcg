@@ -1,9 +1,62 @@
-<div>
-  <h3 class="m-b-md"><%= t('.welcome_message') %></h3>
-  <p class="m-b-lg"><%= t('.system_message') %></p>
+<% breadcrumb :people %>
+<%= header(Person.model_name.human(count: 2)) %>
 
-  <%= simple_form_for(@person_registration, url: person_registration_path, method: :get, class: 'm-t', defaults: { wrapper_html: { class: 'has-float-label' } }) do |f| %>
-    <%= f.input :cpf, input_html: { class: 'js-cpf-mask' } %>
-    <%= f.submit t('general.action.continue'), class: 'btn btn-primary block full-width m-b' %>
-  <% end %>
+<div class="ibox float-e-margins">
+  <div class="ibox-title">
+    <h3><%= Person.model_name.human(count: 2) %></h3>
+  </div>
+  <div class="ibox-content">
+    <div class="row">
+      <div class="col-lg-12">
+        <% if @people.any? %>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover sortable">
+              <thead>
+                <tr>
+                  <th><%= Person.human_attribute_name(:name) %></th>
+                  <th class="text-center"><%= Person.human_attribute_name(:cpf) %></th>
+                  <th class="text-center"><%= Person.human_attribute_name(:email) %></th>
+                  <th class="text-center"><%= Phone.model_name.human %></th>
+                  <th class="text-center"><%= Person.human_attribute_name(:user) %></th>
+                  <th class="text-center"><%= Person.human_attribute_name(:member) %></th>
+                  <th><%= t('general.action.actions') %></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @people.each do |person| %>
+                  <tr>
+                    <td><%= person.name %></td>
+                    <td class="text-center"><%= CPF.new(person.cpf).formatted %></td>
+                    <td class="text-center"><%= person.email %></td>
+                    <td class="text-center">
+                      <% phone = person.phones.first %>
+
+                      <%= fa_icon("#{PhoneKind.coerce(phone.kind).icon}", class: 'text-navy text-bold', style: 'font-size: 18px;') %>&nbsp;&nbsp;
+                      <%= phone.number %>
+                    </td>
+                    <td class="text-center text-navy"><%= fa_icon('check') if person.user.try(:active_for_authentication?) %></td>
+                    <td class="text-center text-navy"><%= fa_icon('check') if person.member %></td>
+                    <td>
+                      <%= link_to '#', data: { toggle: 'modal', target: "#person-#{person.id}-detail", component: 'tooltip', placement: 'bottom', title: t('general.action.details') }, class: 'btn btn-primary btn-xs' do %>
+                        <%= fa_icon 'eye' %>
+                      <% end %>
+                      <%= link_to person_registration_path(person_registration: { cpf: person.cpf }), method: :get, data: { toggle: 'modal', target: "#person-#{person.id}-detail", component: 'tooltip', placement: 'bottom', title: t('general.action.edit') }, class: 'btn btn-warning btn-xs' do %>
+                        <%= fa_icon 'pencil' %>
+                      <% end %>
+                    </td>
+                  </tr>
+                  <%= render 'person_detail', person: person %>
+                <% end %>
+              </tbody>
+            </table>
+            <div class="text-right">
+              <%= paginate @people %>
+            </div>
+          </div>
+        <% else %>
+          <p><%= t('general.no_record', record: Person.model_name.human.downcase) %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
