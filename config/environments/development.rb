@@ -24,13 +24,13 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    user_name: ENV['MAILER_USERNAME'],
+    password: ENV['MAILER_PASSWORD'],
+    address: ENV['MAILER_ADDRESS'],
+    domain: ENV['MAILER_DOMAIN'],
     port: 587,
-    domain: 'example.com',
-    authentication: 'plain',
-    enable_starttls_auto: true,
-    user_name: ENV['GMAIL_USERNAME'],
-    password: ENV['GMAIL_PASSWORD']
+    authentication: :plain,
+    enable_starttls_auto: true
   }
 
   # ActiveSuport
