@@ -6,4 +6,4 @@ if [ "$MAILCATCHER" = "on" ]; then
 fi
 
 echo 'Starting rails server...'
-rails server --binding 0.0.0.0 --port 4000
+rails server --binding 0.0.0.0 --port 3000
